@@ -510,9 +510,12 @@ class OrderManager:
                 logger.error("Realtime data connection unexpectedly closed, restarting.")
                 self.restart()
 
-            self.sanity_check()  # Ensures health of mm - several cut-out points here
-            self.print_status()  # Print skew, delta, etc
-            self.place_orders()  # Creates desired orders and converges to existing orders
+            # self.sanity_check()  # Ensures health of mm - several cut-out points here
+            # self.print_status()  # Print skew, delta, etc
+            # self.place_orders()  # Creates desired orders and converges to existing orders
+            print('getTicker----------!!!')
+            print(self.get_ticker(XBTUSD))
+
 
     def restart(self):
         logger.info("Restarting the market maker...")
